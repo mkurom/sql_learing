@@ -1,0 +1,4 @@
+
+# docker db file
+docker/db/data/
+docker/db/sql/
