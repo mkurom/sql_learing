@@ -62,19 +62,27 @@ WHERE
 
 q2 1教科でも30点以下の点数をとった学生を表示。※重複は不可
 
+A
+```
+SELECT DISTINCT
+  s.name
+FROM
+  exam_results er
+INNER JOIN
+  students s
+ON
+  er.student_id = s.id
+WHERE
+  er.score <= 30;
+```
+
+[memo]
+
 DISTINCT: 重複を1つにまとめる
 INNER JOIN: 内部結合(studentsとexam_resultsのidが同じ)
 
-```
-SELECT DISTINCT
-  student.name
-FROM
-  exam_results exam_result
-INNER JOIN
-  students student
-ON
-  exam_result.student_id = student.id
-WHERE
-  exam_result.score <= 30;
-```
 
+・テーブル名を別名にする(ASは省略可能)
+FROM
+  テーブル名 AS 別名
+    → テーブル名 別名
