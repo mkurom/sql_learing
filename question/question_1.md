@@ -6,6 +6,7 @@ use question1_database
 students
 
 | id   | name          | gender |
+| ---- | ----          | ----   |
 | 0001 | sato taro     | man    |
 | 0002 | suzuki hanako | woman  |
 | 0003 | sasaki kozijo | man    |
@@ -30,6 +31,7 @@ SELECT * FROM students;
 exam_results
 
 | id   | subject   | score |
+| ---- | ----      | ----  |
 | 0001 | japanese  | 30    |
 | 0001 | english   | 30    |
 | 0002 | japanese  | 70    |
