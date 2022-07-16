@@ -23,7 +23,10 @@ exit
 
 // MySqlに接続(コンテナに入っている状態で入力)
 mysql -h 127.0.0.1 -P 3306 -u root -p
+※パスはMYSQL_ROOT_PASSWORDで設定したパスワード
 
+// コンテナ停止、破棄
+docker compose down
 ```
 
 ## MySqlコマンド
