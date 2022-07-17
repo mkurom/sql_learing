@@ -1,5 +1,5 @@
 
-# 使用するテーブル
+# 使用するデータベース
 use question1_database
 
 # 学生テーブル
@@ -13,6 +13,14 @@ students
 | 0004 | tanaka yoko   | woman  |
 
 ------------------------------------------------
+CREATE TABLE `students` (
+  `id` int(4) unsigned zerofill NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` varchar(255) NOT NULL,
+  `gender` varchar(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+------------------------------------------------
+
 INSERT INTO `students` (`id`, `name`, `gender`)
 VALUES
   (0001, 'sato taro', 'man'),
@@ -42,6 +50,15 @@ exam_results
 | 0004 | english   | 22    |
 
 ------------------------------------------------
+CREATE TABLE `exam_results` (
+  `student_id` int(4) unsigned zerofill NOT NULL,
+  `subject` varchar(255) NOT NULL,
+  `score` bigint(20) unsigned NOT NULL,
+  PRIMARY KEY(`student_id`, `subject`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+------------------------------------------------
+
 INSERT INTO `exam_results` (`student_id`, `subject`, `score`)
 VALUES
   (0001, 'japanese', 30),
