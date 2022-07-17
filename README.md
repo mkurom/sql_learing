@@ -10,7 +10,7 @@ sql学習用
 
 ```
 // docker-compose.ymlファイルに従ってコンテナ作成、起動
-docker compose up -d
+docker-compose up -d
 
 // MySqlの起動を確認
 docker ps -a
@@ -26,7 +26,7 @@ mysql -h 127.0.0.1 -P 3306 -u root -p
 ※パスはMYSQL_ROOT_PASSWORDで設定したパスワード
 
 // コンテナ停止、破棄
-docker compose down
+docker-compose down
 ```
 
 ## MySqlコマンド
