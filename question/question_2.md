@@ -4,14 +4,22 @@ use question2_database
 # 社員テーブル
 employees
 
-| id   | name                | department      | hobby     |
-| ---- | ----                | ----            | ----      |
-| 0001 | sato taro           | sales           | soccer    |
-| 0002 | suzuki hanako       | human resources | movie     |
-| 0003 | sasaki kozijo       | accounting      | game      |
-| 0004 | tanaka yoko         | sales           | dirve     |
-| 0005 | kobayakawa jun      | human resources | Null      |
-| 0006 | takahashi keisuke   | accounting      | instagram |
+| id   | name                | department      | hobby1    | hobby2    | hobby3    |
+| ---- | ----                | ----            | ----      | ----      | ----      |
+| 0001 | sato taro           | sales           | soccer    | soccer    | soccer    |
+| 0002 | suzuki hanako       | human resources | movie     | movie     | movie     |
+| 0003 | sasaki kozijo       | accounting      | game      | game      | game      |
+| 0004 | tanaka yoko         | sales           | dirve     | dirve     | dirve     |
+| 0005 | kobayakawa jun      | human resources | Null      | Null      | Null      |
+| 0006 | takahashi keisuke   | accounting      | instagram | instagram | instagram |
+
+↓↓↓↓↓↓
+|  1 | 杉山 圭佑     | 営業部     | サッカー     | ドライブ     | 映画鑑賞     |
+|  2 | 佐藤 結菜     | 人事部     | 映画鑑賞     | 旅行        | インスタ     |
+|  3 | 高橋 絵里     | 経理部     | ゲーム       | NULL       | NULL        |
+|  4 | 早川 良太     | 人事部     | ドライブ     | 料理        | NULL        |
+|  5 | 佐藤 一弥     | 経理部     | NULL        | NULL       | NULL        |
+|  6 | 佐藤 優穂     | 営業部     | インスタ     | TikTok     | NULL        |
 
 ------------------------------------------------
 CREATE TABLE `employees` (
@@ -59,4 +67,40 @@ SELECT
   name, hobby
 FROM
   employees;
+```
+
+```
+SELECT
+  name, hobby1 AS hobby
+FROM
+  employees
+UNION ALL SELECT
+  name, hobby2
+FROM
+  employees
+UNION ALL SELECT
+  name, hobby3
+FROM
+  employees;
+```
+
+# q3.名字が佐藤である社員の、趣味の数を表示せよ。
+
+A
+```
+SELECT
+  name, COUNT(hobby1) + COUNT(hobby2) + COUNT(hobby3) AS hobby_count
+FROM
+  employees
+WHERE
+  name LIKE '佐藤 %'
+GROUP BY
+  name;
+```
+
+# q4.同じ趣味を持つ社員の一覧を表示せよ。なお、氏名リストの並び順は社員番号の昇順で、区切り文字は「, 」とする。
+
+A
+```
+SELECT hobby1 as hobby FROM employees UNION hobby2 UNION hobby3 WHERE hobby LIKE 'インスタ';
 ```
