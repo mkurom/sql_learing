@@ -102,5 +102,20 @@ GROUP BY
 
 A
 ```
-SELECT hobby1 as hobby FROM employees UNION hobby2 UNION hobby3 WHERE hobby LIKE 'インスタ';
+SELECT
+    hobby,
+    GROUP_CONCAT(name ORDER BY id separator ', ') AS name_list
+FROM (
+    SELECT id, name, hobby1 AS hobby FROM employees
+    UNION ALL
+    SELECT id, name, hobby2 FROM employees
+    UNION ALL
+    SELECT id, name, hobby3 FROM employees
+) hobby_table
+WHERE
+    hobby IS NOT NULL
+GROUP BY
+    hobby
+HAVING
+    COUNT(*) > 1
 ```
