@@ -1,0 +1,10 @@
+-- 各グループの中でFIFAランクが最も高い国と低い国のランキング番号を表示してください。
+
+SELECT
+  group_name AS GroupName,
+  MIN(ranking) AS topRankings,
+  MAX(ranking) AS lowerRankings
+FROM
+  countries
+GROUP BY
+  group_name;

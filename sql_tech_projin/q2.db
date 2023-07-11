@@ -1,0 +1,10 @@
+-- ゴールキーパーの平均身長、平均体重を表示してください
+
+SELECT
+  AVG(p.height) AS avgHeight,
+  AVG(p.weight) AS avgWeight
+FROM
+  players p
+WHERE
+  position = 'GK';
+
