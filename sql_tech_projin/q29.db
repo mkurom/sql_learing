@@ -1,0 +1,8 @@
+-- 身長が170cm未満の選手を抽出してください
+
+SELECT
+  *
+FROM
+  players
+WHERE
+  height < '170';
