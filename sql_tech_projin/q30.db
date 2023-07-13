@@ -1,0 +1,9 @@
+-- FIFAランクが日本（46位）の前後10位に該当する国（36位～56位）を抽出してください。
+-- ただし、BETWEEN句を用いてください
+
+SELECT
+  *
+FROM
+  countries
+WHERE
+  ranking BETWEEN 36 AND 56;
