@@ -1,0 +1,8 @@
+-- グループC以外に所属する国をすべて抽出してください
+
+SELECT
+  *
+FROM
+  countries
+WHERE
+  group_name <> 'C';

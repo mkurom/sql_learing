@@ -1,0 +1,13 @@
+-- 全選手の以下のデータを抽出してください
+
+/*・背番号（uniform_num）
+・名前（name）
+・所属クラブ（club）
+*/
+
+SELECT
+  p.uniform_num,
+  p.name,
+  p.club
+FROM
+  players p;
