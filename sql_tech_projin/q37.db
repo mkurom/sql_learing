@@ -1,0 +1,12 @@
+-- 全選手の中でBMI値が20台の選手を抽出してください
+
+-- weight / POW(height / 100, 2)
+
+SELECT
+  *
+FROM
+  players
+WHERE
+  weight / POW(height / 100, 2) >= 20
+AND
+  weight / POW(height / 100, 2) < 21;

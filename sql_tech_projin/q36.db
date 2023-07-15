@@ -1,0 +1,9 @@
+-- グループA以外に所属する国をすべて抽出してください。
+-- ただし、「!=」や「<>」を使わずに、「NOT」を使用してください
+
+SELECT
+  *
+FROM
+  countries
+WHERE
+  NOT group_name = 'A';

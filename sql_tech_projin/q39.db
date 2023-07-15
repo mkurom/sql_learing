@@ -1,0 +1,15 @@
+-- FWかMFの中で170未満の選手を抽出してください。
+-- ただし、ORとANDを使用してください
+
+SELECT
+  *
+FROM
+  players
+WHERE
+(
+  position = 'FW'
+OR
+  position = 'MF'
+)
+AND
+  height < 170;
