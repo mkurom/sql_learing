@@ -1,0 +1,9 @@
+-- 全ての選手を年齢の低い順に表示してください。
+-- なお、年齢を計算する必要はありません
+
+SELECT
+  *
+FROM
+  players
+ORDER BY
+  birth DESC;

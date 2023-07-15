@@ -1,0 +1,9 @@
+-- 全選手の身長と体重を足した値をカラム名「体力指数」として表示してください。
+-- 合わせて選手の名前、選手の所属クラブも表示してください。
+
+SELECT
+  name,
+  club,
+  height + weight AS sum
+FROM
+  players;

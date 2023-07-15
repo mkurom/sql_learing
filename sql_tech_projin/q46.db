@@ -1,0 +1,9 @@
+-- 全ての選手を身長の大きい順に表示してください。
+-- 同じ身長の選手は体重の重い順に表示してください。
+
+SELECT
+  *
+FROM
+  players
+ORDER BY
+  height DESC, weight DESC;

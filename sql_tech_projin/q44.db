@@ -1,0 +1,8 @@
+-- FIFAランクの高い国から順にすべての国名を表示してください
+
+SELECT
+  *
+FROM
+  countries
+ORDER BY
+  ranking;
