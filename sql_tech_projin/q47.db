@@ -1,0 +1,10 @@
+-- 全ての選手のポジションの1文字目（GKであればG、FWであればF）を出力してください。
+
+SELECT
+  id,
+  country_id,
+  uniform_num,
+  SUBSTRING(position, 1, 1),
+  name
+FROM
+  players;

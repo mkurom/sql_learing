@@ -1,0 +1,7 @@
+-- 全選手の誕生日を「2017年04月30日」のフォーマットで出力してください
+
+SELECT
+  name,
+  DATE_FORMAT(birth, '%Y年%m月%d日')
+FROM
+  players;

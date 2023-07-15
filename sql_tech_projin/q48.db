@@ -1,0 +1,10 @@
+-- 出場国の国名が長いものから順に出力してください
+
+SELECT
+  name,
+  LENGTH(name)
+FROM
+  countries
+ORDER BY
+  LENGTH(name) DESC;
+

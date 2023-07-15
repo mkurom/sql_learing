@@ -1,0 +1,8 @@
+-- 全てのゴール情報を出力してください。
+-- ただし、オウンゴール（player_idがNULLのデータ）はIFNULL関数を使用してplayer_idを「9999」と表示してください。
+
+SELECT
+  IFNULL(player_id, 9999) AS player_id,
+  goal_time
+FROM
+  goals;
