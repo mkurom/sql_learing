@@ -1,0 +1,12 @@
+-- 選手のポジションがGK、DF、MFに該当する選手をすべて抽出してください。
+-- ただし、IN句を用いてください
+
+SELECT
+  *
+FROM
+  players
+WHERE
+  position
+IN
+  ('GK', 'DF', 'MF');
+  

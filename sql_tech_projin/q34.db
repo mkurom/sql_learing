@@ -1,0 +1,9 @@
+-- 名前の末尾が「ニョ」で終わるプレイヤーを抽出してください
+
+SELECT
+  *
+FROM
+  players
+WHERE
+  name LIKE '%ニョ';
+  

@@ -1,0 +1,9 @@
+-- 名前の中に「ニョ」が含まれるプレイヤーを抽出してください
+
+SELECT
+  *
+FROM
+  players
+WHERE
+  name LIKE '%ニョ%';
+  

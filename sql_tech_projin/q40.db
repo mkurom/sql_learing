@@ -1,0 +1,8 @@
+-- ポジションの一覧を重複なしで表示してください。
+-- グループ化は使用しないでください
+
+SELECT
+  DISTINCT
+    position
+FROM
+  players;

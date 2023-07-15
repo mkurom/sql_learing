@@ -1,0 +1,10 @@
+-- 全選手の中から小柄な選手（身長が165cm未満か、体重が60kg未満）を抽出してください。
+
+SELECT
+  *
+FROM
+  players
+WHERE
+  height < 165
+OR
+  weight < 60;

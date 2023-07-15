@@ -1,0 +1,10 @@
+-- オウンゴールとなったゴールを抽出してください。
+-- goalsテーブルのplayer_idカラムにNULLが格納されているデータがオウンゴールを表しています
+
+SELECT
+  *
+FROM
+  goals
+WHERE
+  player_id IS NULL;
+  
