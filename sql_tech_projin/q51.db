@@ -1,0 +1,11 @@
+-- 全てのゴール情報を出力してください。
+-- ただし、オウンゴール（player_idがNULLのデータ）はCASE関数を使用してplayer_idを「9999」と表示してください。
+
+SELECT
+  CASE
+    WHEN player_id IS NULL THEN 9999
+    ELSE player_id
+  END AS player_id,
+  goal_time
+FROM
+  goals;
