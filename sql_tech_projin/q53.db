@@ -1,0 +1,8 @@
+-- 日本の選手（player_idが714から736）が上げたゴール数を表示してください。
+
+SELECT
+  COUNT(id) AS Japanise goals
+FROM
+  goals
+WHERE
+  714 <= player_id AND player_id <= 736;

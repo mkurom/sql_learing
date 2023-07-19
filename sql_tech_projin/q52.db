@@ -1,0 +1,8 @@
+-- 全ての選手の平均身長、平均体重を表示してください。
+
+
+SELECT
+  AVG(height),
+  AVG(weight)
+FROM
+  players;

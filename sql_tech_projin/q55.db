@@ -1,0 +1,7 @@
+-- 全ての選手の中で最も高い身長と、最も重い体重を表示してください。
+
+SELECT
+  MAX(height),
+  MAX(weight)
+FROM
+  players;

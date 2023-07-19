@@ -1,0 +1,7 @@
+-- オウンゴール（player_idがNULL）以外の総ゴール数を表示してください。
+-- ただし、WHERE句は使用しないでください。
+
+SELECT
+  COUNT(player_id) AS own goals
+FROM
+  goals;
