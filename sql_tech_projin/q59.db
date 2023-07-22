@@ -1,0 +1,17 @@
+-- 全ての試合の国名と選手名、得点時間を表示してください。
+-- オウンゴール（player_idがNULL）は表示しないでください
+
+SELECT
+  countries.name,
+  players.name,
+  goals.goal_time
+FROM
+  goals
+JOIN
+  players
+ON
+  goals.player_id = players.id
+JOIN
+  countries
+ON
+  countries.id = players.country_id;

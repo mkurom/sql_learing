@@ -1,0 +1,12 @@
+-- 全ての選手の所属国と名前、背番号を表示してください
+
+SELECT
+  countries.name,
+  players.name,
+  players.uniform_num
+FROM
+  players
+JOIN
+  countries
+ON
+  countries.id = players.country_id;

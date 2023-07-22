@@ -1,0 +1,8 @@
+-- AグループのFIFAランク最上位を表示してください
+
+SELECT
+  MIN(ranking)
+FROM
+  countries
+WHERE
+  group_name = 'A';
