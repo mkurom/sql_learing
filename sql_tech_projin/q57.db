@@ -1,0 +1,8 @@
+-- CグループのFIFAランクの合計値を表示してください
+
+SELECT
+  SUM(ranking)
+FROM
+  countries
+WHERE
+  group_name = 'C';
