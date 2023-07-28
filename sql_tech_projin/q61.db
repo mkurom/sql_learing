@@ -1,0 +1,14 @@
+-- 全ての試合のゴール時間と選手名を表示してください。
+-- 右側外部結合を使用してオウンゴール（player_idがNULL）も表示してください
+
+SELECT
+  goals.goal_time,
+  players.uniform_num,
+  players.position,
+  players.name
+FROM
+  players
+RIGHT JOIN
+  goals
+ON
+  players.id = goals.player_id;

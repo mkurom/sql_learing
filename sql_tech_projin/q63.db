@@ -1,0 +1,16 @@
+-- 全ての試合のキックオフ時間と対戦国の国名を表示してください
+
+SELECT
+  p.kickoff,
+  cm.name AS my_country,
+  ce.name AS enemy_country
+FROM
+  pairings p
+JOIN
+  countries cm
+ON
+  p.my_country_id = cm.id
+JOIN
+  countries ce
+ON
+  p.my_country_id = ce.id;
