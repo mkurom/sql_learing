@@ -1,0 +1,14 @@
+-- 全てのゴール時間と得点を上げたプレイヤー名を表示してください。
+-- オウンゴールは表示しないでください。
+-- ただし、副問合せは使わずに、結合を用いてください
+
+SELECT
+  g.id,
+  g.goal_time,
+  p.name
+FROM
+  goals g
+JOIN
+  players p
+ON
+  p.id = g.player_id;

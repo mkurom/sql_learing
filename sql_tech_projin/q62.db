@@ -1,0 +1,18 @@
+-- 全ての試合のゴール時間と選手名、国名を表示してください。
+-- また、オウンゴール（player_idがNULL）も表示してください。
+
+SELECT
+  c.name AS country_name,
+  g.goal_time,
+  p.position,
+  p.name
+FROM
+  goals g
+LEFT JOIN
+  players p
+ON
+  g.player_id = p.id
+LEFT JOIN
+  countries c
+ON
+  p.country_id = c.id;
