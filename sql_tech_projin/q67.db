@@ -1,0 +1,20 @@
+-- 各ポジションごと（GK、FWなど）に最も身長と、その選手名を表示してください。
+-- ただし、SELECT句に副問合せを使用してください。
+
+SELECT
+  p1.position,
+  MAX(p1.height) as max_height,
+  (
+  SELECT
+    p2.name
+  FROM
+    players p2
+  WHERE
+    MAX(p1.height) = p2.height
+  AND
+    p1.position = p2.position
+  ) AS name
+FROM 
+  players p1
+GROUP BY
+  p1.position;

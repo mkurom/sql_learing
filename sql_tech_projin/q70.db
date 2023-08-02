@@ -1,0 +1,21 @@
+-- 1980年生まれと、1981年生まれの選手が何人いるか調べてください。
+-- ただし、日付関数は使用せず、UNION句を使用してください。
+
+SELECT
+  '1980' AS 'birth_day',
+  COUNT(id)
+FROM
+  players
+WHERE
+  birth
+BETWEEN
+  '1980-1-1' AND '1980-12-31'
+UNION
+SELECT '1981',
+COUNT(id)
+FROM
+  players
+WHERE
+  birth
+BETWEEN
+  '1981-1-1' AND '1981-12-31'
