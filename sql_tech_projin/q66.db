@@ -1,0 +1,23 @@
+-- 各ポジションごと（GK、FWなど）に最も身長と、その選手名、所属クラブを表示してください。
+-- ただし、FROM句に副問合せを使用してください
+
+SELECT
+  p1.position,
+  p1.max_height,
+  p2.name,
+  p2.club
+FROM (
+  SELECT
+    position,
+    MAX(height) AS max_height
+  FROM
+    players
+  GROUP BY
+    position
+  ) p1
+LEFT JOIN
+  players p2
+ON
+  p1.max_height = p2.height
+AND
+  p1.position = p2.position;

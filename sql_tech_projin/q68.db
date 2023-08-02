@@ -1,0 +1,17 @@
+-- 全選手の平均身長より低い選手をすべて抽出してください。
+-- 表示する列は、背番号、ポジション、名前、身長としてください。
+
+SELECT
+  p1.uniform_num,
+  p1.position,
+  p1.name,
+  p1.height
+FROM 
+  players p1
+WHERE
+  p1.height < (
+    SELECT
+      AVG(p2.height)
+    FROM
+      players p2
+  );
